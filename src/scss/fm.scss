@@ -1,0 +1,165 @@
+$fm-blue: #ADADFF;
+$fm-light-grey: #EEEEEE;
+$fm-grey: #DDDDDD;
+$fm-dark-grey: #777777;
+$fm-gold: #FF9900;
+$fm-red: #FF0033;
+
+h1, h2, h3, h4, h5, h6, button, nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+body {
+    font-family: 'Raleway', sans-serif;    
+}
+.fm-text-dark-grey {
+    color: $fm-dark-grey;
+}
+.fm-text-blue {
+    color: $fm-blue;
+}
+.fm-text-footer-gold {
+    color: $fm-gold;
+    text-decoration: none;
+    &:hover {
+        color: white;
+    }
+}
+.fm-text-footer-white {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: $fm-gold;
+    }
+}
+.fm-blue {
+    background-color: $fm-blue;
+	color: white;
+}
+.fm-blue-hover {
+    background-color: $fm-blue;
+	color: white;
+    &:hover {
+        background-color: white;
+        color: black;        
+    }
+}
+.fm-black {
+    background-color: black;
+    color: white;
+}
+.fm-black-hover {
+    background-color: black;
+    color: white;
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+.fm-white {
+    background-color: white;
+    color: black;
+}
+.fm-white-hover {
+    background-color: white;
+    color: black;
+    &:hover {
+        background-color: $fm-grey;
+        color: black;
+    }
+}
+.fm-light-grey {
+    background-color: $fm-light-grey;
+    color: black;
+}
+.fm-dark-grey {
+    background-color: $fm-dark-grey;
+    color: white;
+}
+.fm-jumbo {
+    h1 {
+        margin-top: 48px;
+        font-size: 64px;
+    }
+    button {
+        margin-top: 16px;
+    }
+}
+.fm-nav {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+.fm-menu {
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    &.shadow {
+        box-shadow: 0px 1px 4px 0px rgba(102,102,102,0.5);
+    }
+}
+.fm-menu-dropdown {
+    width: 100%;
+    float: none;
+}
+.fm-menu > a, .fm-menu-dropdown > a {
+    padding: 8px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+.fm-button {
+    display: inline-block;
+    border: none;
+    outline: 0;
+    padding: 16px 24px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    cursor: hand;
+    white-space: nowrap;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.xlarge {
+    font-size: x-large;
+}
+.large {
+    font-size: large;
+}
+.small {
+    font-size: small;
+}
+@media (min-width: 600px) {
+    /* for desktop */
+    .hide-desktop {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    /* for mobile */
+    .hide-mobile {
+        display: none;
+    }
+    .show-mobile {
+        display: block;
+    }
+}
