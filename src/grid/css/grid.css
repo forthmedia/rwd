@@ -75,7 +75,7 @@
   width: 100%; }
 
 /* pad */
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .grid-third {
     width: 33.33333%; }
   .grid-two-third {
