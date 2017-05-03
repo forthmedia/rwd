@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+#grid-container {
+    opacity: 0.5;
+    height: auto;
+    z-index: 100;
+}
+.grid-wrapper {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.grid {
+    margin: 0;
+    height: 100%;
+    width: percentage(1/12);
+    float: left;
+    border-right: 1px solid gray;
+    background-color: lightgray;
+    &:first-of-type {
+        border-left: 1px solid gray;
+    }
+}
+.col-1 {
+    width: percentage(1/12);
+}
+.col-2 {
+    width: percentage(2/12);
+}
+.col-3 {
+    width: percentage(3/12);
+}
+.col-4 {
+    width: percentage(4/12);
+}
+.col-5 {
+    width: percentage(5/12);
+}
+.col-6 {
+    width: percentage(6/12);
+}
+.col-7 {
+    width: percentage(7/12);
+}
+.col-8 {
+    width: percentage(8/12);
+}
+.col-9 {
+    width: percentage(9/12);
+}
+.col-10 {
+    width: percentage(10/12);
+}
+.col-11 {
+    width: percentage(11/12);
+}
+.col-12 {
+    width: percentage(12/12);
+}
+/* mobile first */
+.grid-fourth {
+    width: percentage(12/12);
+}
+.grid-third {
+   width: percentage(12/12);
+}
+.grid-two-third {
+    width: percentage(12/12);
+}
+.grid-half {
+    width: percentage(12/12);
+}
+.grid-full {
+    width: percentage(12/12);
+}
+/* pad */
+@media (min-width: 770px) {
+    .grid-third {
+        width: percentage(4/12);
+    }
+    .grid-two-third {
+        width: percentage(8/12);
+    }
+    .grid-half {
+        width: percentage(6/12)
+    }
+}
+/* desktop */
+@media (min-width: 600px) {
+    .grid-fourth {
+        width: percentage(3/12);
+    }
+}
+[class^="col-"], [class^="grid-"] {
+    float: left;
+}
