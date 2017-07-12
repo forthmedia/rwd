@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>rwd</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="./css/fm.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./grid/css/grid.css">
+    <link rel="stylesheet" href="./css/nv.d3.css">
+    <!-- endbuild -->
+
+    <!--build:css css/font-awesome.min.css-->
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <!-- endbuild -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!--build:js js/scripts.min.js --> 
+    <script src="./js/scripts.js"></script>
+    <!-- endbuild -->
+
+    <!--build:js js/d3.min.js --> 
+    <script src="./js/d3.js"></script>
+    <!-- endbuild -->
+
+    <!--build:js js/nv.d3.min.js --> 
+    <script src="./js/nv.d3.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body>
+    
+<!-- grid -->
+<div id="grid-container" class="hidden">
+    <div class="grid-wrapper">
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+    </div>
+</div>
+
+<div class="fm-nav">
+    <!-- for desktop -->
+    <nav class="fm-blue fm-menu shadow align-left large">
+        <a href="javascript:void(0)" id="menu_switch" class="fm-black-hover float-right hide-desktop"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <a href="#top" id="home_menu" class="fm-black-hover float-left"><i class="fa fa-home pad-fa" aria-hidden="true"></i> rwd</a>
+        <a href="#" id="pictures_menu" class="fm-blue-hover float-left hide-mobile">Pictures</a>
+        <a href="#" id="data_menu" class="fm-blue-hover float-left hide-mobile">Data</a>
+        <a href="#" class="fm-blue-hover float-left hide-mobile" id="grid_switch">Grid: <span id="grid_state">Off</span></a>
+    </nav>
+    <!-- for mobile -->
+    <nav id="menu_mobile" class="fm-menu-dropdown show-mobile large hidden">
+        <a href="#" id="pictures_mobile" class="fm-white-hover show-mobile hide-desktop"><i class="fa fa-image pad-fa"></i> Pictures</a>
+        <a href="#" id="data_mobile" class="fm-white-hover show-mobile hide-desktop"><i class="fa fa-bar-chart pad-fa"></i> Data</a>
+        <a href="#" id="grid_switch_mobile" class="fm-white-hover show-mobile hide-desktop"><i class="fa fa-th-large pad-fa"></i> Grid: <span id="grid_state_menu">Off</span></a>
+    </nav>
+</div>
+
+<!-- Home -->
+<div id="home" class="">
+    <header class="fm-blue fm-jumbo container center">
+        <h1 id="title">RWD</h1>
+        <p class="xlarge">Responsive Web Design</p>
+    </header>
+    <div id="about" class="container">
+        <h3 class="center">ABOUT RWD</h3>
+        <p class="center large margin-bottom-64">This web page automatically adjusts to Mobile and Desktop browsers.</p>
+        <div class="row center">
+            <div class="grid-third item">
+            <span class="jumbo center margin-bottom-32"><i class="fa fa-desktop"></i></span>
+            <p class="large">Responsive</p>
+            <p>Computers, smartphones and tablets demand different views on different screens.</p>
+            </div>
+            <div class="grid-third item">
+            <span class="jumbo center margin-bottom-32"><i class="fa fa-image"></i></span>
+            <p class="large">Pictures</p>
+            <p>Appropriately sized images are downloaded for your screen.</p>
+            </p>
+            </div>
+            <div class="grid-third item">
+            <span class="jumbo center margin-bottom-32"><i class="fa fa-bar-chart"></i></span>
+            <p class="large">Data</p>
+            <p>Scalable Vector Graphics (SVG) are recomputed as screen size changes.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fm-light-grey container">
+        <div class="row">
+            <div class="grid-two-third">
+            <h3>ADVANTAGES OF RESPONSIVE WEB DESIGN</h3>
+            <h4 class=" margin-bottom-32">
+                With people browsing the internet on their smartphones the importance of web pages
+                which accommodate a wide range of devices cannot be ignored. HTML5 and CSS3 are supported
+                by the latest mobile and desktop browsers. This approach to engineering design
+                extends market reach and optimizes web performance, bypassing the cost of iOS and Android
+                cross-platform development.
+                </h4>
+            <p class="fm-text-dark-grey">
+                <b>The technology inside.</b>
+                This page employs its own CSS3 framework and grid. Fluid design is achieved by combining
+                advanced features of HTML5 and CSS3. Unlike pictures, SVG images cannot simply be stretched
+                by the browser. JavaScript for this project employs programmatic technique triggered by HTML
+                DOM to dynamically scale graphics.
+                </p>
+            </div>
+            <div class="grid-third center">
+            <span class="decorative fm-text-dark-grey center"><i class="fa fa-rocket"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pictures -->
+<div id="pictures" class="hidden">
+    <div class="fm-light-grey container">
+    <hgroup class="center">
+        <h2 class=>PICTURES</h2>
+        <p>This web page automatically loads smaller images scaled for mobile devices.</p>
+    </hgroup>
+    </div>
+    <div class="fm-light-grey row">
+        <div class="grid-half image margin-bottom-32">
+            <figure class="fm-white shadow">
+            <picture>
+                <source srcset="./images/bridge_sm.png" media="(max-width: 600px)">
+                <source srcset="./images/bridge.png">
+                <img src="./images/bridge.png" alt="Bridge at Big Sur" title="Bridge at Big Sur">
+            </picture>
+            <figcaption class="caption">
+                <h3>California Coast</h3>
+                <p>Highway 1, Big Sur.</p>
+            </figcaption>
+            </figure>
+        </div>
+        <div class="grid-half image margin-bottom-32">
+            <figure class="fm-white shadow">
+            <picture>
+                <source srcset="./images/forrest_sm.png" media="(max-width: 600px)">
+                <source srcset="./images/forrest.png">
+                <img src="./images/forrest.png" alt="Snow covered forrest" title="Snow covered forrest">
+            </picture>
+            <figcaption class="caption">
+                <h3>Yosemite Forrest</h3>
+                <p>Snowfall</p>
+            </figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="fm-light-grey row">
+        <div class="grid-half image margin-bottom-32">
+            <figure class="fm-white shadow">
+            <picture>
+                <source srcset="./images/mountain_sm.png" media="(max-width: 600px)">
+                <source srcset="./images/mountain.png">                
+                <img src="./images/mountain.png" alt="Mountain view" title="Mountain view">
+            </picture>
+            <figcaption class="caption">
+                <h3>Skyline Boulevard</h3>
+                <p>Santa Cruz mountains.</p>
+            </figcaption>
+            </figure>
+        </div>
+        <div class="grid-half image margin-bottom-32">
+            <figure class="fm-white shadow">
+            <picture>
+                <source srcset="./images/meetup_sm.png" media="(max-width: 600px)">
+                <source srcset="./images/meetup.png">                
+                <img src="./images/meetup.png" alt="Continental breakfast" title="Continental breakfast">
+            </picture>
+            <figcaption class="caption">
+                <h3>Meetup</h3>
+                <p>Silicon Valley, CA</p>
+            </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<!-- Data -->
+<div id="data" class="hidden">
+    <div class="fm-light-grey container">
+    <hgroup class="center">
+        <h2 class=>DATA</h2>
+        <p>SVG data visualization on this web page is dynamically recomputed as the view port changes.</p>
+    </hgroup>
+    </div>
+    <div class="fm-light-grey row">
+        <div class="grid-half image margin-bottom-32">
+            <figure class="fm-white shadow">
+            <div id="bar_chart" class="chart with-transitions"><svg></svg></div>    
+            <figcaption class="caption">
+                <h3>Bar Chart</h3>
+                <p>NVD3</p>
+            </figcaption>
+            </figure>
+        </div>
+        <div class="grid-half image margin-bottom-32">
+            <figure class="fm-white shadow">
+            <div id="line_chart" class="chart with-transitions"><svg></svg></div>
+            <figcaption class="caption">
+                <h3>Line Chart</h3>
+                <p>NVD3</p>
+            </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="fm-dark-grey container center">
+    <h5>Resize your browser window to see the content adjust responsively.</h5>
+</div>
+
+<footer class="container center fm-black">
+    <a href="#top" class="fm-button fm-white-hover"><i class="fa fa-arrow-circle-up pad-fa"></i>Go to top</a>
+    <section class="xlarge">
+        <a href="https://github.com/forthmedia/rwd/" title="GitHub" target="_blank" class="fm-text-footer-white"><i class="fa fa-github pad-fa"></i></a>
+        <a href="https://www.linkedin.com/in/kurtjonach/" title="LinkedIn" target="_blank" class="fm-text-footer-white"><i class="fa fa-linkedin"></i></a>
+    </section>
+    <p>Code repository on <a href="https://github.com/forthmedia/rwd/" title="GitHub" target="_blank" class="fm-text-footer-gold">GitHub</a></p>
+</footer>
+
+<script>
+    var grid = new Grid();
+    document.getElementById('grid_switch').onclick = function() {
+        grid.Handler();
+    }
+    document.getElementById('grid_switch_mobile').onclick = function() {
+        grid.Handler();
+    }
+
+    var menu = new Menu();
+    document.getElementById('menu_switch').onclick = function() {
+        menu.ShowMenuHandler();
+    }
+    document.getElementById('home_menu').onclick = function() {
+        menu.HideMobile();
+        menu.Show('home');
+    }
+    document.getElementById('pictures_menu').onclick = function() {
+        menu.Show('pictures');
+    }
+    document.getElementById('pictures_mobile').onclick = function() {
+        menu.HideMobile();
+        menu.Show('pictures');
+    }
+    document.getElementById('data_menu').onclick = function() {
+        menu.Show('data');
+    }
+    document.getElementById('data_mobile').onclick = function() {
+        menu.HideMobile();
+        menu.Show('data');
+    }
+
+    var chart = new Chart();
+    chart.InitBarChart();
+    chart.InitLineChart();
+</script>
+</body>
+</html>
