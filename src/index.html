@@ -55,14 +55,14 @@
 <div class="fm-nav">
     <!-- for desktop -->
     <nav class="fm-blue fm-menu shadow align-left large">
-        <a href="javascript:void(0)" id="menu_switch" class="fm-black-hover float-right hide-desktop"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <a href="#top" id="home_menu" class="fm-black-hover float-left"><i class="fa fa-home pad-fa" aria-hidden="true"></i> rwd</a>
+        <a href="javascript:void(0)" id="menu_switch" class="fm-black-hover float-right hide-desktop" aria-controls="menu_mobile" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <a href="#" id="pictures_menu" class="fm-blue-hover float-left hide-mobile">Pictures</a>
         <a href="#" id="data_menu" class="fm-blue-hover float-left hide-mobile">Data</a>
         <a href="#" class="fm-blue-hover float-left hide-mobile" id="grid_switch">Grid: <span id="grid_state">Off</span></a>
     </nav>
     <!-- for mobile -->
-    <nav id="menu_mobile" class="fm-menu-dropdown show-mobile large hidden">
+    <nav id="menu_mobile" class="fm-menu-dropdown show-mobile large hidden" role="region" tabindex="-1">
         <a href="#" id="pictures_mobile" class="fm-white-hover show-mobile hide-desktop"><i class="fa fa-image pad-fa"></i> Pictures</a>
         <a href="#" id="data_mobile" class="fm-white-hover show-mobile hide-desktop"><i class="fa fa-bar-chart pad-fa"></i> Data</a>
         <a href="#" id="grid_switch_mobile" class="fm-white-hover show-mobile hide-desktop"><i class="fa fa-th-large pad-fa"></i> Grid: <span id="grid_state_menu">Off</span></a>

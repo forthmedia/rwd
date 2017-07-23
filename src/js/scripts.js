@@ -40,7 +40,7 @@ var Menu = function() {
 
     // private
     var menu_mobile = document.getElementById('menu_mobile');
-    var meun_switch = document.getElementById('menu_switch');
+    var menu_switch = document.getElementById('menu_switch');
 
     var home = document.getElementById('home');
     var pictures = document.getElementById('pictures');
@@ -52,10 +52,12 @@ var Menu = function() {
             menu_mobile.classList.remove('hidden');
             menu_switch.classList.remove('fm-black-hover');
             menu_switch.classList.add('fm-white-hover');
+            menu_switch.setAttribute('aria-expanded', true);
         } else {
             menu_mobile.classList.add('hidden');
             menu_switch.classList.remove('fm-white-hover');
             menu_switch.classList.add('fm-black-hover');
+            menu_switch.setAttribute('aria-expanded', false);
         }        
     }
 
